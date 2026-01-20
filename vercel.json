@@ -2,21 +2,5 @@
   "buildCommand": "npm run build",
   "devCommand": "npm run dev",
   "installCommand": "npm install",
-  "framework": "nextjs",
-  "env": {
-    "DATABASE_URL": {
-      "description": "MongoDB connection string"
-    },
-    "JWT_SECRET": {
-      "description": "JWT signing secret"
-    },
-    "JWT_EXPIRE": {
-      "description": "JWT expiration time",
-      "value": "7d"
-    },
-    "NEXT_PUBLIC_API_URL": {
-      "description": "API URL for client-side requests",
-      "value": "https://your-domain.vercel.app"
-    }
-  }
+  "framework": "nextjs"
 }
