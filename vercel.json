@@ -28,10 +28,5 @@
       "value": "https://your-domain.vercel.app",
       "type": "plaintext"
     }
-  ],
-  "buildSettings": {
-    "commandForCI": "npm run build",
-    "commandForIgnoringBuildStep": "npm run build:skip"
-  },
-  "crons": []
+  ]
 }
