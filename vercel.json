@@ -3,30 +3,20 @@
   "devCommand": "npm run dev",
   "installCommand": "npm install",
   "framework": "nextjs",
-  "env": [
-    {
-      "key": "DATABASE_URL",
-      "description": "MongoDB connection string",
-      "value": "",
-      "type": "secret"
+  "env": {
+    "DATABASE_URL": {
+      "description": "MongoDB connection string"
     },
-    {
-      "key": "JWT_SECRET",
-      "description": "JWT signing secret",
-      "value": "",
-      "type": "secret"
+    "JWT_SECRET": {
+      "description": "JWT signing secret"
     },
-    {
-      "key": "JWT_EXPIRE",
+    "JWT_EXPIRE": {
       "description": "JWT expiration time",
-      "value": "7d",
-      "type": "plaintext"
+      "value": "7d"
     },
-    {
-      "key": "NEXT_PUBLIC_API_URL",
+    "NEXT_PUBLIC_API_URL": {
       "description": "API URL for client-side requests",
-      "value": "https://your-domain.vercel.app",
-      "type": "plaintext"
+      "value": "https://your-domain.vercel.app"
     }
-  ]
+  }
 }
