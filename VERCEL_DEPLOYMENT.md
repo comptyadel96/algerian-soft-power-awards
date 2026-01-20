@@ -126,13 +126,15 @@ typescript: {
 ### Erreur "DATABASE_URL not found"
 
 **Solution:** Assurez-vous que la variable est définie dans Vercel:
+
 1. Aller à **Settings** → **Environment Variables**
 2. Ajouter `DATABASE_URL`
 3. Relancer le build
 
 ### Erreur "Cannot find module"
 
-**Solution:** 
+**Solution:**
+
 ```bash
 # Sur votre machine locale:
 npm install
