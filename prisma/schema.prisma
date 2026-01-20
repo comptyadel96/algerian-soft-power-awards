@@ -1,0 +1,131 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String     @id @default(auto()) @map("_id") @db.ObjectId
+  email     String     @unique
+  password  String
+  firstName String
+  lastName  String
+  role      Role       @default(USER)
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+  
+  // Relations
+  nominations    Nomination[]
+  votes          Vote[]
+  submissions    CandidateSubmission[]
+}
+
+model Admin {
+  id        String    @id @default(auto()) @map("_id") @db.ObjectId
+  email     String    @unique
+  password  String
+  firstName String
+  lastName  String
+  role      AdminRole @default(MODERATOR)
+  active    Boolean   @default(true)
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+}
+
+model Category {
+  id          String     @id @default(auto()) @map("_id") @db.ObjectId
+  title       String     @unique
+  description String
+  icon        String
+  order       Int        @unique
+  isGrand     Boolean    @default(false)
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
+  
+  // Relations
+  candidates CandidateSubmission[]
+  nominations Nomination[]
+}
+
+model CandidateSubmission {
+  id            String   @id @default(auto()) @map("_id") @db.ObjectId
+  categoryId    String   @db.ObjectId
+  userId        String   @db.ObjectId
+  fullName      String
+  email         String
+  biography     String
+  achievements  String[]
+  projectTitle  String
+  projectDesc   String
+  mediaUrl      String?
+  status        SubmissionStatus @default(PENDING)
+  votes         Int      @default(0)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  
+  // Relations
+  category  Category @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  nominations Nomination[]
+  votes_rel Vote[]
+  
+  @@index([categoryId])
+  @@index([userId])
+}
+
+model Nomination {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId      String   @db.ObjectId
+  categoryId  String   @db.ObjectId
+  candidateId String   @db.ObjectId
+  message     String?
+  createdAt   DateTime @default(now())
+  
+  // Relations
+  user      User                 @relation(fields: [userId], references: [id], onDelete: Cascade)
+  category  Category             @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  candidate CandidateSubmission  @relation(fields: [candidateId], references: [id], onDelete: Cascade)
+  
+  @@unique([userId, candidateId])
+  @@index([categoryId])
+}
+
+model Vote {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId      String   @db.ObjectId
+  candidateId String   @db.ObjectId
+  weight      Int      @default(1)
+  createdAt   DateTime @default(now())
+  
+  // Relations
+  user      User                @relation(fields: [userId], references: [id], onDelete: Cascade)
+  candidate CandidateSubmission @relation(fields: [candidateId], references: [id], onDelete: Cascade)
+  
+  @@unique([userId, candidateId])
+  @@index([candidateId])
+}
+
+enum Role {
+  USER
+  JURY
+  PARTNER
+}
+
+enum AdminRole {
+  MODERATOR
+  ADMIN
+  SUPER_ADMIN
+}
+
+enum SubmissionStatus {
+  PENDING
+  APPROVED
+  REJECTED
+  WITHDRAWN
+}
