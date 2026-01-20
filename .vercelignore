@@ -1,0 +1,70 @@
+# Vercel build optimization
+
+# Dependencies
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Testing
+coverage/
+.nyc_output/
+
+# Documentation
+*.md
+docs/
+
+# Development
+.env.local
+.env.local.example
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+.next/
+out/
+dist/
+
+# Logs
+logs/
+*.log
+
+# Git
+.git/
+.gitignore
+
+# Version control
+.git
+.github
+.gitlab-ci.yml
+.gitattributes
+
+# CI/CD
+.github/workflows/
+.circleci/
+.travis.yml
+Jenkinsfile
+
+# Package manager lock files (keep them!)
+# package-lock.json
+# yarn.lock
+
+# Docker
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Scripts
+scripts/
+.husky/
