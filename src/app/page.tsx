@@ -12,7 +12,7 @@ import { Animations } from '@/components/shared/Animations';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#0a0a0a] text-white font-sans selection:bg-[#d4af37] selection:text-black">
+    <div className="min-h-screen bg-gradient-to-b from-[#8b0d0d] to-[#3f0a0a] text-white font-sans selection:bg-[#b91c1c] selection:text-white">
       <Navbar />
       <HeroSection />
       <AboutSection />
@@ -23,7 +23,7 @@ export default function Home() {
       <section className="py-24 border-y border-white/10 bg-[#0a0a0a]">
         <div className="container mx-auto px-6">
           <p className="text-center text-xs font-bold tracking-[0.5em] text-gray-500 uppercase mb-16">
-            Ils soutiennent l'influence algérienne
+            Ils soutiennent l&apos;influence algérienne
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-12 opacity-30 grayscale hover:grayscale-0 transition-all">
             <div className="flex items-center justify-center h-20 text-2xl font-serif italic border border-white/10">

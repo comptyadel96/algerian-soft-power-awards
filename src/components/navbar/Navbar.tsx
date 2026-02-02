@@ -21,6 +21,8 @@ export const Navbar = () => {
     { href: "#awards", label: "Les Trophées" },
     { href: "#programme", label: "Programme" },
     { href: "#galerie", label: "Galerie" },
+    { href: "/presse", label: "Presse" },
+    { href: "/participants", label: "Participants" },
   ];
 
   return (
@@ -33,28 +35,28 @@ export const Navbar = () => {
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
         <Link href="/" className="flex items-center gap-2">
-          <div className="w-10 h-10 border-2 border-[#d4af37] rounded-full flex items-center justify-center font-serif text-[#d4af37] font-bold text-xl italic">
+          <div className="w-10 h-10 border-2 border-[#b91c1c] rounded-full flex items-center justify-center font-serif text-[#b91c1c] font-bold text-xl italic">
             A
           </div>
           <span className="text-xl font-bold tracking-[0.2em] uppercase hidden md:block">
-            Algerian Soft Power <span className="text-[#d4af37]">Awards</span>
+            Algerian Soft Power <span className="text-[#b91c1c]">Awards</span>
           </span>
         </Link>
 
         {/* Desktop Menu */}
         <div className="hidden lg:flex items-center gap-10 text-xs font-semibold tracking-widest uppercase">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.href}
               href={link.href}
-              className="hover:text-[#d4af37] transition-colors"
+              className="hover:text-[#b91c1c] hover:underline decoration-red-600 underline-offset-4 transition-all"
             >
               {link.label}
-            </a>
+            </Link>
           ))}
           <Link
             href="/auth/login"
-            className="px-6 py-2 border border-[#d4af37] text-[#d4af37] hover:bg-[#d4af37] hover:text-black transition-all duration-300"
+            className="px-6 py-2 border border-[#b91c1c] text-[#b91c1c] hover:bg-[#b91c1c] hover:text-white transition-all duration-300"
           >
             Connexion
           </Link>
@@ -62,7 +64,7 @@ export const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="lg:hidden text-[#d4af37]"
+          className="lg:hidden text-[#b91c1c]"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           {isMenuOpen ? <X size={32} /> : <Menu size={32} />}
@@ -71,15 +73,16 @@ export const Navbar = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="fixed inset-0 z-40 bg-black flex flex-col justify-center items-center gap-8 text-2xl font-bold uppercase tracking-widest top-[80px]">
+        <div className="fixed inset-0 z-40 bg-black flex flex-col justify-center items-center gap-8 text-2xl font-bold uppercase tracking-widest top-20">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.href}
               href={link.href}
               onClick={() => setIsMenuOpen(false)}
+              className="hover:text-[#b91c1c] hover:underline decoration-red-600 transition-all"
             >
               {link.label}
-            </a>
+            </Link>
           ))}
           <Link href="/auth/login" onClick={() => setIsMenuOpen(false)}>
             Connexion

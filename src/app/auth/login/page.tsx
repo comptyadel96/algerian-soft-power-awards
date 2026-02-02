@@ -60,12 +60,12 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#0a0a0a] to-[#1a1a1a] flex items-center justify-center px-4">
+    <div className="min-h-screen bg-linear-to-br from-[#0a0a0a] to-[#1a1a1a] flex items-center justify-center px-4">
       <div className="w-full max-w-md">
         {/* Logo */}
         <div className="text-center mb-8">
           <Link href="/" className="inline-flex items-center gap-2">
-            <div className="w-12 h-12 border-2 border-[#d4af37] rounded-full flex items-center justify-center font-serif text-[#d4af37] font-bold text-xl italic">
+            <div className="w-12 h-12 border-2 border-[#b91c1c] rounded-full flex items-center justify-center font-serif text-[#b91c1c] font-bold text-xl italic">
               A
             </div>
             <span className="text-white font-bold text-lg">ASPA</span>
@@ -104,7 +104,7 @@ export default function LoginPage() {
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="votre@email.com"
-                  className="w-full bg-white/10 border border-white/20 rounded-lg py-2 pl-10 pr-4 text-white placeholder:text-gray-500 focus:outline-none focus:border-[#d4af37] transition-colors"
+                  className="w-full bg-white/10 border border-white/20 rounded-lg py-2 pl-10 pr-4 text-white placeholder:text-gray-500 focus:outline-none focus:border-[#b91c1c] transition-colors"
                   required
                 />
               </div>
@@ -126,7 +126,7 @@ export default function LoginPage() {
                   value={formData.password}
                   onChange={handleChange}
                   placeholder="••••••••"
-                  className="w-full bg-white/10 border border-white/20 rounded-lg py-2 pl-10 pr-4 text-white placeholder:text-gray-500 focus:outline-none focus:border-[#d4af37] transition-colors"
+                  className="w-full bg-white/10 border border-white/20 rounded-lg py-2 pl-10 pr-4 text-white placeholder:text-gray-500 focus:outline-none focus:border-[#b91c1c] transition-colors"
                   required
                 />
               </div>
@@ -136,7 +136,7 @@ export default function LoginPage() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-[#d4af37] hover:bg-yellow-400 disabled:opacity-50 text-black font-bold py-3 rounded-lg transition-colors mt-8"
+              className="w-full bg-[#b91c1c] hover:bg-red-600 disabled:opacity-50 text-white font-bold py-3 rounded-lg transition-colors mt-8"
             >
               {loading ? "Connexion en cours..." : "Connexion"}
             </button>
@@ -147,9 +147,9 @@ export default function LoginPage() {
             Pas encore de compte ?{" "}
             <Link
               href="/auth/register"
-              className="text-[#d4af37] hover:underline font-semibold"
+              className="text-[#b91c1c] hover:underline font-semibold"
             >
-              S'inscrire
+              S&apos;inscrire
             </Link>
           </p>
         </div>

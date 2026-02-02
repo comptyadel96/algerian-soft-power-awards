@@ -71,7 +71,7 @@ export const CategoriesGrid = () => {
     <section id="awards" className="py-32 bg-[#0a0a0a]">
       <div className="container mx-auto px-6 text-center mb-20">
         <h2 className="text-4xl md:text-6xl font-serif mb-6 italic">
-          Les Catégories <span className="text-[#d4af37]">D'Excellence</span>
+          Les Catégories <span className="text-[#b91c1c]">D'Excellence</span>
         </h2>
         <p className="text-gray-400 max-w-2xl mx-auto uppercase tracking-widest text-sm">
           Chaque trophée célèbre un pilier de notre rayonnement.
@@ -82,9 +82,9 @@ export const CategoriesGrid = () => {
         {CATEGORIES.map((cat) => (
           <div
             key={cat.id}
-            className={`group relative p-8 border border-white/5 h-80 flex flex-col justify-between transition-all duration-500 hover:border-[#d4af37] overflow-hidden ${
+            className={`group relative p-8 border border-white/5 h-80 flex flex-col justify-between transition-all duration-500 hover:border-[#b91c1c] overflow-hidden ${
               cat.gold
-                ? "bg-[#d4af37]/5 md:col-span-2 lg:col-span-1 border-[#d4af37]/30"
+                ? "bg-[#b91c1c]/5 md:col-span-2 lg:col-span-1 border-[#b91c1c]/30"
                 : "bg-white/5"
             }`}
             onMouseEnter={() => setActiveCategory(cat.id)}
@@ -100,7 +100,7 @@ export const CategoriesGrid = () => {
             <div
               className={`transition-transform duration-500 ${
                 activeCategory === cat.id
-                  ? "text-[#d4af37] -translate-y-2"
+                  ? "text-[#b91c1c] -translate-y-2"
                   : "text-white/60"
               }`}
             >
@@ -110,7 +110,7 @@ export const CategoriesGrid = () => {
             <div>
               <h3
                 className={`text-xl font-bold mb-3 tracking-tight ${
-                  cat.gold ? "text-[#d4af37]" : "text-white"
+                  cat.gold ? "text-[#b91c1c]" : "text-white"
                 }`}
               >
                 {cat.title}

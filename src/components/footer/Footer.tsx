@@ -6,13 +6,13 @@ export const Footer = () => {
           © 2024 Algerian Soft Power Awards. Tous droits réservés.
         </div>
         <div className="flex gap-8 text-[10px] font-bold tracking-widest uppercase text-gray-400">
-          <a href="#" className="hover:text-[#d4af37]">
+          <a href="#" className="hover:text-[#b91c1c]">
             Presse
           </a>
-          <a href="#" className="hover:text-[#d4af37]">
+          <a href="#" className="hover:text-[#b91c1c]">
             Mentions Légales
           </a>
-          <a href="#" className="hover:text-[#d4af37]">
+          <a href="#" className="hover:text-[#b91c1c]">
             Confidentialité
           </a>
         </div>

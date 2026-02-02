@@ -160,7 +160,7 @@ export function SEOHead({
       />
 
       {/* Additional SEO */}
-      <meta name="theme-color" content="#d4af37" />
+      <meta name="theme-color" content="#b91c1c" />
       <meta name="format-detection" content="telephone=yes" />
       <meta name="format-detection" content="email=yes" />
 

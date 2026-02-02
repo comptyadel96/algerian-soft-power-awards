@@ -197,10 +197,10 @@
   @keyframes borderGradient {
     0%,
     100% {
-      border-image-source: linear-gradient(90deg, #d4af37, #f4d03f, #d4af37);
+      border-image-source: linear-gradient(90deg, #b91c1c, #ef4444, #b91c1c);
     }
     50% {
-      border-image-source: linear-gradient(90deg, #f4d03f, #d4af37, #f4d03f);
+      border-image-source: linear-gradient(90deg, #ef4444, #b91c1c, #ef4444);
     }
   }
 

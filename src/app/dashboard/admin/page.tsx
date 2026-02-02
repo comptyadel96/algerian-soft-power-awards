@@ -35,12 +35,13 @@ export default function AdminDashboard() {
         router.push("/dashboard/user");
         return;
       }
-      setUser(parsedUser);
+      queueMicrotask(() => setUser(parsedUser));
     } catch {
       router.push("/auth/login");
+    } finally {
+      // defer loading state update
+      queueMicrotask(() => setLoading(false));
     }
-
-    setLoading(false);
   }, [router]);
 
   const handleLogout = () => {
@@ -69,7 +70,7 @@ export default function AdminDashboard() {
       <nav className="bg-black/50 border-b border-white/10 backdrop-blur-md sticky top-0 z-40">
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">
           <Link href="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 border-2 border-[#d4af37] rounded-full flex items-center justify-center font-serif text-[#d4af37] text-sm font-bold">
+            <div className="w-8 h-8 border-2 border-[#b91c1c] rounded-full flex items-center justify-center font-serif text-[#b91c1c] text-sm font-bold">
               A
             </div>
             <span className="font-bold hidden md:block">ASPA Admin</span>
@@ -81,7 +82,7 @@ export default function AdminDashboard() {
             </span>
             <button
               onClick={handleLogout}
-              className="flex items-center gap-2 px-4 py-2 rounded-lg border border-[#d4af37]/30 hover:border-[#d4af37] text-[#d4af37] transition-colors"
+              className="flex items-center gap-2 px-4 py-2 rounded-lg border border-[#b91c1c]/30 hover:border-[#b91c1c] text-[#b91c1c] transition-colors"
             >
               <LogOut size={18} />
               <span className="hidden sm:inline">Déconnexion</span>
@@ -96,7 +97,7 @@ export default function AdminDashboard() {
           <div className="lg:col-span-1">
             <div className="bg-white/5 border border-white/10 rounded-lg p-6 space-y-4">
               <div className="pb-6 border-b border-white/10">
-                <div className="inline-block px-3 py-1 bg-[#d4af37]/20 text-[#d4af37] text-xs font-bold rounded-full">
+                <div className="inline-block px-3 py-1 bg-[#b91c1c]/20 text-[#b91c1c] text-xs font-bold rounded-full">
                   ADMINISTRATEUR
                 </div>
               </div>
@@ -113,7 +114,7 @@ export default function AdminDashboard() {
                     onClick={() => setActiveTab(id)}
                     className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg transition-all ${
                       activeTab === id
-                        ? "bg-[#d4af37]/20 border border-[#d4af37]/50 text-[#d4af37]"
+                        ? "bg-[#b91c1c]/20 border border-[#b91c1c]/50 text-[#b91c1c]"
                         : "text-gray-400 hover:text-white"
                     }`}
                   >
@@ -143,7 +144,7 @@ export default function AdminDashboard() {
                           <p className="text-gray-400 text-sm">{label}</p>
                           <p className="text-3xl font-bold mt-2">{value}</p>
                         </div>
-                        <div className="w-12 h-12 bg-[#d4af37]/20 rounded-lg flex items-center justify-center text-[#d4af37]">
+                        <div className="w-12 h-12 bg-[#b91c1c]/20 rounded-lg flex items-center justify-center text-[#b91c1c]">
                           <Icon size={24} />
                         </div>
                       </div>
@@ -193,9 +194,9 @@ export default function AdminDashboard() {
                 <div className="space-y-6">
                   <div>
                     <label className="block text-sm font-semibold text-gray-400 mb-4">
-                      Catégories d'Awards
+                      Catégories d&apos;Awards
                     </label>
-                    <button className="px-6 py-3 bg-[#d4af37]/20 border border-[#d4af37]/50 text-[#d4af37] rounded-lg hover:bg-[#d4af37]/30 transition-colors font-semibold">
+                    <button className="px-6 py-3 bg-[#b91c1c]/20 border border-[#b91c1c]/50 text-[#b91c1c] rounded-lg hover:bg-[#b91c1c]/30 transition-colors font-semibold">
                       Gérer les catégories
                     </button>
                   </div>
@@ -204,7 +205,7 @@ export default function AdminDashboard() {
                     <label className="block text-sm font-semibold text-gray-400 mb-4">
                       Calendrier
                     </label>
-                    <button className="px-6 py-3 bg-[#d4af37]/20 border border-[#d4af37]/50 text-[#d4af37] rounded-lg hover:bg-[#d4af37]/30 transition-colors font-semibold">
+                    <button className="px-6 py-3 bg-[#b91c1c]/20 border border-[#b91c1c]/50 text-[#b91c1c] rounded-lg hover:bg-[#b91c1c]/30 transition-colors font-semibold">
                       Configurer les dates
                     </button>
                   </div>
@@ -213,7 +214,7 @@ export default function AdminDashboard() {
                     <label className="block text-sm font-semibold text-gray-400 mb-4">
                       Rapports
                     </label>
-                    <button className="px-6 py-3 bg-[#d4af37]/20 border border-[#d4af37]/50 text-[#d4af37] rounded-lg hover:bg-[#d4af37]/30 transition-colors font-semibold">
+                    <button className="px-6 py-3 bg-[#b91c1c]/20 border border-[#b91c1c]/50 text-[#b91c1c] rounded-lg hover:bg-[#b91c1c]/30 transition-colors font-semibold">
                       Exporter les données
                     </button>
                   </div>

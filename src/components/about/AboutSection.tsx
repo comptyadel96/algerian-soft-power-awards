@@ -11,13 +11,13 @@ export const AboutSection = () => {
                 className="w-full h-full object-cover grayscale"
               />
             </div>
-            <div className="absolute -bottom-10 -right-10 w-2/3 h-2/3 border-[15px] border-[#d4af37] -z-10"></div>
+            <div className="absolute -bottom-10 -right-10 w-2/3 h-2/3 border-[15px] border-[#b91c1c] -z-10"></div>
           </div>
 
           <div>
             <h2 className="text-4xl md:text-5xl font-serif mb-8 leading-tight">
               L'influence par{" "}
-              <span className="italic text-[#d4af37]">l'Inspiration</span>
+              <span className="italic text-[#b91c1c]">l'Inspiration</span>
             </h2>
 
             <div className="space-y-6 text-gray-700 text-lg leading-relaxed">
@@ -40,13 +40,13 @@ export const AboutSection = () => {
 
             <div className="mt-12 grid grid-cols-2 gap-8 border-t border-gray-100 pt-8">
               <div>
-                <div className="text-4xl font-serif text-[#d4af37]">07</div>
+                <div className="text-4xl font-serif text-[#b91c1c]">07</div>
                 <div className="text-xs uppercase tracking-widest font-bold mt-2">
                   Catégories
                 </div>
               </div>
               <div>
-                <div className="text-4xl font-serif text-[#d4af37]">01</div>
+                <div className="text-4xl font-serif text-[#b91c1c]">01</div>
                 <div className="text-xs uppercase tracking-widest font-bold mt-2">
                   Grand Prix
                 </div>

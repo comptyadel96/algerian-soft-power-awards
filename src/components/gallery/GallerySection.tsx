@@ -11,7 +11,7 @@ export const GallerySection = () => {
     <section id="galerie" className="py-32 bg-black overflow-hidden">
       <div className="px-6 mb-16 text-center">
         <h2 className="text-4xl md:text-6xl font-serif italic mb-4">
-          L'univers <span className="text-[#d4af37]">Visuel</span>
+          L'univers <span className="text-[#b91c1c]">Visuel</span>
         </h2>
       </div>
 
@@ -28,7 +28,7 @@ export const GallerySection = () => {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-80"></div>
             <div className="absolute bottom-6 left-6 translate-y-4 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
-              <span className="text-[#d4af37] text-xs font-bold tracking-widest uppercase mb-2 block">
+              <span className="text-[#b91c1c] text-xs font-bold tracking-widest uppercase mb-2 block">
                 Edition 2024
               </span>
               <h4 className="text-xl font-bold">Moments d'exception</h4>

@@ -25,7 +25,7 @@ export const ContactSection = () => {
             <div>
               <h2 className="text-5xl font-serif mb-8 italic">
                 Travaillons <br />
-                <span className="text-[#d4af37]">Ensemble</span>
+                <span className="text-[#b91c1c]">Ensemble</span>
               </h2>
               <p className="text-gray-600 mb-12">
                 Devenez partenaire ou contactez-nous pour toute information
@@ -60,7 +60,7 @@ export const ContactSection = () => {
                   onChange={(e) =>
                     setFormData({ ...formData, firstName: e.target.value })
                   }
-                  className="w-full bg-transparent border-b-2 border-gray-200 py-4 focus:border-[#d4af37] outline-none transition-all uppercase text-xs font-bold tracking-widest"
+                  className="w-full bg-transparent border-b-2 border-gray-200 py-4 focus:border-[#b91c1c] outline-none transition-all uppercase text-xs font-bold tracking-widest"
                 />
                 <input
                   type="text"
@@ -69,7 +69,7 @@ export const ContactSection = () => {
                   onChange={(e) =>
                     setFormData({ ...formData, lastName: e.target.value })
                   }
-                  className="w-full bg-transparent border-b-2 border-gray-200 py-4 focus:border-[#d4af37] outline-none transition-all uppercase text-xs font-bold tracking-widest"
+                  className="w-full bg-transparent border-b-2 border-gray-200 py-4 focus:border-[#b91c1c] outline-none transition-all uppercase text-xs font-bold tracking-widest"
                 />
               </div>
               <input
@@ -79,7 +79,7 @@ export const ContactSection = () => {
                 onChange={(e) =>
                   setFormData({ ...formData, email: e.target.value })
                 }
-                className="w-full bg-transparent border-b-2 border-gray-200 py-4 focus:border-[#d4af37] outline-none transition-all uppercase text-xs font-bold tracking-widest"
+                className="w-full bg-transparent border-b-2 border-gray-200 py-4 focus:border-[#b91c1c] outline-none transition-all uppercase text-xs font-bold tracking-widest"
               />
               <textarea
                 placeholder="VOTRE MESSAGE"
@@ -88,11 +88,11 @@ export const ContactSection = () => {
                 onChange={(e) =>
                   setFormData({ ...formData, message: e.target.value })
                 }
-                className="w-full bg-transparent border-b-2 border-gray-200 py-4 focus:border-[#d4af37] outline-none transition-all uppercase text-xs font-bold tracking-widest resize-none"
+                className="w-full bg-transparent border-b-2 border-gray-200 py-4 focus:border-[#b91c1c] outline-none transition-all uppercase text-xs font-bold tracking-widest resize-none"
               ></textarea>
               <button
                 type="submit"
-                className="w-full py-6 bg-black text-white font-bold uppercase tracking-[0.3em] hover:bg-[#d4af37] transition-all duration-500"
+                className="w-full py-6 bg-black text-white font-bold uppercase tracking-[0.3em] hover:bg-[#b91c1c] transition-all duration-500"
               >
                 Envoyer
               </button>
