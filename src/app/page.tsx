@@ -1,14 +1,12 @@
-'use client';
-
-import { Navbar } from '@/components/navbar/Navbar';
-import { HeroSection } from '@/components/hero/HeroSection';
-import { AboutSection } from '@/components/about/AboutSection';
-import { CategoriesGrid } from '@/components/categories/CategoriesGrid';
-import { ProgrammeSection } from '@/components/programme/ProgrammeSection';
-import { GallerySection } from '@/components/gallery/GallerySection';
-import { ContactSection } from '@/components/contact/ContactSection';
-import { Footer } from '@/components/footer/Footer';
-import { Animations } from '@/components/shared/Animations';
+import { Navbar } from "@/components/navbar/Navbar";
+import { HeroSection } from "@/components/hero/HeroSection";
+import { AboutSection } from "@/components/about/AboutSection";
+import { CategoriesGrid } from "@/components/categories/CategoriesGrid";
+import { ProgrammeSection } from "@/components/programme/ProgrammeSection";
+import { GallerySection } from "@/components/gallery/GallerySection";
+import { ContactSection } from "@/components/contact/ContactSection";
+import { Footer } from "@/components/footer/Footer";
+import { Animations } from "@/components/shared/Animations";
 
 export default function Home() {
   return (
@@ -18,7 +16,7 @@ export default function Home() {
       <AboutSection />
       <CategoriesGrid />
       <ProgrammeSection />
-      
+
       {/* Partners Section */}
       <section className="py-24 border-y border-white/10 bg-[#0a0a0a]">
         <div className="container mx-auto px-6">

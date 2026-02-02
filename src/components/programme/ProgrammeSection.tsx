@@ -29,7 +29,8 @@ export const ProgrammeSection = () => {
               Calendrier de l&apos;édition
             </h2>
             <p className="text-gray-400">
-              Une série d&apos;événements exclusifs pour forger de nouveaux ponts.
+              Une série d&apos;événements exclusifs pour forger de nouveaux
+              ponts.
             </p>
           </div>
           <button className="text-[#b91c1c] flex items-center gap-2 font-bold uppercase tracking-widest text-sm hover:underline decoration-2 underline-offset-8">

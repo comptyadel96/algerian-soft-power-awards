@@ -22,9 +22,9 @@ export const HeroSection = () => {
         </h1>
 
         <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-12 font-light leading-relaxed animate-fade-in delay-200">
-          Reconnaître et structurer l&apos;influence de l&apos;Algérie à travers le monde.
-          Une célébration de notre patrimoine, de notre créativité et de notre
-          futur.
+          Reconnaître et structurer l&apos;influence de l&apos;Algérie à travers
+          le monde. Une célébration de notre patrimoine, de notre créativité et
+          de notre futur.
         </p>
 
         <div className="flex flex-col sm:flex-row justify-center gap-6 animate-fade-in delay-300">
