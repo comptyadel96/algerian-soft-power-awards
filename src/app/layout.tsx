@@ -4,6 +4,7 @@ import "./globals.css";
 import "@/styles/animations-advanced.css";
 import { generateMetadata as generateSEOMetadata } from "@/config/seo";
 import { JSONLDScript } from "@/lib/seo";
+import { DirectionManager } from "@/components/shared/DirectionManager";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,7 +16,22 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = generateSEOMetadata();
+export const metadata: Metadata = {
+  ...generateSEOMetadata(),
+  icons: [
+    {
+      rel: "icon",
+      type: "image/png",
+      url: "/logo.png",
+      sizes: "192x192",
+    },
+    {
+      rel: "apple-touch-icon",
+      url: "/logo.png",
+      sizes: "192x192",
+    },
+  ],
+};
 
 export default function RootLayout({
   children,
@@ -45,6 +61,10 @@ export default function RootLayout({
         <JSONLDScript type="Organization" />
         <JSONLDScript type="Event" />
 
+        {/* Favicon */}
+        <link rel="icon" type="image/png" href="/logo.png" />
+        <link rel="apple-touch-icon" href="/logo.png" />
+
         {/* Preconnect to external domains */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
@@ -60,6 +80,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <DirectionManager />
         {children}
       </body>
     </html>

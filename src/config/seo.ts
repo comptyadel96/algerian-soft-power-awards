@@ -1,15 +1,15 @@
 import { Metadata } from "next";
 
 export const siteMetadata = {
-  title: "Algerian Soft Power Awards | Célébrant l'excellence algérienne",
-  titleTemplate: "%s | Algerian Soft Power Awards",
+  title: "Algerian Soft Power Day | Célébrant l'excellence algérienne",
+  titleTemplate: "%s | Algerian Soft Power Day",
   description:
-    "Les Awards Algerian Soft Power célèbrent les individus et organisations qui incarnent l'excellence et l'influence culturelle de l'Algérie sur la scène mondiale.",
+    "Algerian Soft Power Day célèbre les individus et organisations qui incarnent l'excellence et l'influence culturelle de l'Algérie sur la scène mondiale.",
   defaultDescription:
-    "Découvrez et célébrez l'excellence algérienne avec les Awards Algerian Soft Power.",
-  siteUrl: "https://algerian-soft-power-awards.com",
-  socialBanner: "https://algerian-soft-power-awards.com/og-image.jpg",
-  author: "Algerian Soft Power Awards",
+    "Découvrez et célébrez l'excellence algérienne avec Algerian Soft Power Day.",
+  siteUrl: "https://algerian-soft-power-day.com",
+  socialBanner: "https://algerian-soft-power-day.com/og-image.jpg",
+  author: "Algerian Soft Power Day",
   email: "info@aspa.com",
   phone: "+213 (0) 23 XX XX XX",
   locale: "fr_DZ",
@@ -38,7 +38,7 @@ export const siteMetadata = {
   },
   authors: [
     {
-      name: "Algerian Soft Power Awards Team",
+      name: "Algerian Soft Power Day Team",
       url: "https://algerian-soft-power-awards.com",
     },
   ],
@@ -46,7 +46,7 @@ export const siteMetadata = {
     type: "website",
     locale: "fr_DZ",
     url: "https://algerian-soft-power-awards.com",
-    title: "Algerian Soft Power Awards | Célébrant l'excellence algérienne",
+    title: "Algerian Soft Power Day | Célébrant l'excellence algérienne",
     description:
       "Découvrez les individus et organisations les plus influents qui représentent l'Algérie sur la scène mondiale.",
     images: [
@@ -54,26 +54,26 @@ export const siteMetadata = {
         url: "https://algerian-soft-power-awards.com/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Algerian Soft Power Awards",
+        alt: "Algerian Soft Power Day",
         type: "image/jpeg",
       },
       {
-        url: "https://algerian-soft-power-awards.com/og-image-square.jpg",
+        url: "https://algerian-soft-power-day.com/og-image-square.jpg",
         width: 800,
         height: 800,
-        alt: "Algerian Soft Power Awards",
+        alt: "Algerian Soft Power Day",
         type: "image/jpeg",
       },
     ],
-    siteName: "Algerian Soft Power Awards",
+    siteName: "Algerian Soft Power Day",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Algerian Soft Power Awards",
+    title: "Algerian Soft Power Day",
     description:
       "Célébrant l'excellence algérienne et l'influence culturelle mondiale",
     creator: "@SoftPowerAwards",
-    images: ["https://algerian-soft-power-awards.com/og-image.jpg"],
+    images: ["https://algerian-soft-power-day.com/og-image.jpg"],
   },
   verification: {
     google: "google-site-verification-code",
@@ -122,15 +122,15 @@ export const structuredData = {
   organization: {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "Algerian Soft Power Awards",
-    url: "https://algerian-soft-power-awards.com",
-    logo: "https://algerian-soft-power-awards.com/logo.png",
+    name: "Algerian Soft Power Day",
+    url: "https://algerian-soft-power-day.com",
+    logo: "https://algerian-soft-power-day.com/logo.png",
     description: siteMetadata.description,
     sameAs: [
       "https://www.facebook.com/softpowerawards",
       "https://www.twitter.com/SoftPowerAwards",
       "https://www.instagram.com/softpowerawards",
-      "https://www.linkedin.com/company/algerian-soft-power-awards",
+      "https://www.linkedin.com/company/algerian-soft-power-day",
     ],
     contactPoint: {
       "@type": "ContactPoint",
@@ -143,7 +143,7 @@ export const structuredData = {
   event: {
     "@context": "https://schema.org",
     "@type": "Event",
-    name: "Algerian Soft Power Awards 2026",
+    name: "Algerian Soft Power Day 2026",
     description: siteMetadata.description,
     image: siteMetadata.socialBanner,
     startDate: "2026-06-01T09:00:00+01:00",
@@ -161,12 +161,12 @@ export const structuredData = {
     },
     organizer: {
       "@type": "Organization",
-      name: "Algerian Soft Power Awards",
-      url: "https://algerian-soft-power-awards.com",
+      name: "Algerian Soft Power Day",
+      url: "https://algerian-soft-power-day.com",
     },
     offers: {
       "@type": "Offer",
-      url: "https://algerian-soft-power-awards.com",
+      url: "https://algerian-soft-power-day.com",
       price: "0",
       priceCurrency: "DZD",
       availability: "https://schema.org/PreOrder",

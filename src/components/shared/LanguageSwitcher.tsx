@@ -16,11 +16,17 @@ export function LanguageSwitcher() {
       segments.shift();
     }
 
-    // Add new language prefix
-    const newPath =
-      lang === "fr" ? `/${segments.join("/")}` : `/ar/${segments.join("/")}`;
+    // Build base path without trailing slash
+    const base = segments.length ? `/${segments.join("/")}` : "";
 
-    router.push(newPath === "/" ? `${lang === "ar" ? "/ar" : "/"}` : newPath);
+    // New path: /ar + base for Arabic, otherwise base or '/'
+    const newPath = lang === "ar" ? `/ar${base}` : base || "/";
+
+    try {
+      router.push(newPath);
+    } catch (err) {
+      console.error("Error navigating to language path:", err);
+    }
   };
 
   return (
@@ -29,7 +35,7 @@ export function LanguageSwitcher() {
         onClick={() => handleLanguageChange("fr")}
         className={`px-3 py-2 rounded-full transition-all ${
           !pathname.startsWith("/ar")
-            ? "bg-gold text-black font-semibold"
+            ? "bg-[#d4af37] text-black font-semibold"
             : "text-gray-400 hover:text-white"
         }`}
       >
@@ -40,7 +46,7 @@ export function LanguageSwitcher() {
         onClick={() => handleLanguageChange("ar")}
         className={`px-3 py-2 rounded-full transition-all ${
           pathname.startsWith("/ar")
-            ? "bg-gold text-black font-semibold"
+            ? "bg-[#d4af37] text-black font-semibold"
             : "text-gray-400 hover:text-white"
         }`}
       >

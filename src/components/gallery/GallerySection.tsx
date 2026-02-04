@@ -1,18 +1,34 @@
+"use client";
+
+import { useLocale } from "@/lib/useLocale";
+import { t } from "@/lib/i18n";
+
 const GALLERY_IMAGES = [
-  "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&q=80",
-  "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&q=80",
-  "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80",
-  "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?auto=format&fit=crop&q=80",
-  "https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&q=80",
+  "/Gallerie/Algerian desert ________________.jpeg",
+  "/Gallerie/Constantine Algérie algeria photos enregistré par adel Hafsi.jpeg",
+  "/Gallerie/Casbah d'Alger_.jpeg",
+  "/Gallerie/Ghardaia - Algérie_.jpeg",
+  "/Gallerie/Notre Dame d'Afrique.jpeg",
+  "/Gallerie/Setif, algeria _. سطيف",
+  "/Gallerie/La grande Mosquée de tlemcen.jpeg",
+  "/Gallerie/Tadrart, Djanet, Algerian desert.jpeg",
+  "/Gallerie/Algerian couscous ________✨.jpeg",
+  "/Gallerie/emir Abdelkader Statue ________.jpeg",
 ];
 
 export const GallerySection = () => {
+  const lang = useLocale();
+
   return (
     <section id="galerie" className="py-32 bg-black overflow-hidden">
       <div className="px-6 mb-16 text-center">
         <h2 className="text-4xl md:text-6xl font-serif italic mb-4">
-          L'univers <span className="text-[#b91c1c]">Visuel</span>
+          {t(lang, "gallery.title")}{" "}
+          <span className="text-[#b91c1c]">Visuel</span>
         </h2>
+        <p className="text-gray-400 text-sm">
+          {t(lang, "gallery.description")}
+        </p>
       </div>
 
       <div className="flex gap-4 animate-scroll-horizontal">

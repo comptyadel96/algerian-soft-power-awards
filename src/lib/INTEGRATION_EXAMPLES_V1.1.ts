@@ -1,5 +1,5 @@
 // Exemples d'intégration - Multilingue, Animations & SEO
-// Algerian Soft Power Awards v1.1.0
+// Algerian Soft Power Day v1.1.0
 
 // ═══════════════════════════════════════════════════════════════════════════
 // 1. UTILISER LES TRADUCTIONS (MULTILINGUE FR/AR)

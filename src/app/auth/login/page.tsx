@@ -78,7 +78,7 @@ export default function LoginPage() {
             Connexion
           </h1>
           <p className="text-gray-400 text-center text-sm mb-8">
-            Accédez à votre compte Algerian Soft Power Awards
+            Accédez à votre compte Algerian Soft Power Day
           </p>
 
           {error && (

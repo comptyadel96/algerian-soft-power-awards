@@ -2,9 +2,14 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
+import { LanguageSwitcher } from "@/components/shared/LanguageSwitcher";
+import { useLocale } from "@/lib/useLocale";
+import { t } from "@/lib/i18n";
 
 export const Navbar = () => {
+  const lang = useLocale();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -17,12 +22,12 @@ export const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { href: "#about", label: "L'Initiative" },
-    { href: "#awards", label: "Les Trophées" },
-    { href: "#programme", label: "Programme" },
-    { href: "#galerie", label: "Galerie" },
-    { href: "/presse", label: "Presse" },
-    { href: "/participants", label: "Participants" },
+    { href: "#about", labelKey: "about" },
+    { href: "#awards", labelKey: "categories" },
+    { href: "#programme", labelKey: "programme" },
+    { href: "#galerie", labelKey: "gallery" },
+    { href: "/presse", labelKey: "presse" },
+    { href: "/participants", labelKey: "participants" },
   ];
 
   return (
@@ -34,12 +39,17 @@ export const Navbar = () => {
       }`}
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
-        <Link href="/" className="flex items-center gap-2">
-          <div className="w-10 h-10 border-2 border-[#b91c1c] rounded-full flex items-center justify-center font-serif text-[#b91c1c] font-bold text-xl italic">
-            A
-          </div>
+        <Link href="/" className="flex items-center gap-3">
+          <Image
+            src="/logo.png"
+            alt="Algerian Soft Power Day Logo"
+            width={40}
+            height={40}
+            className="w-10 h-10 object-contain"
+          />
           <span className="text-xl font-bold tracking-[0.2em] uppercase hidden md:block">
-            Algerian Soft Power <span className="text-[#b91c1c]">Awards</span>
+            <span className="text-[#d4af37]">Algerian Soft Power</span>{" "}
+            <span className="italic text-[#b91c1c]">Day</span>
           </span>
         </Link>
 
@@ -49,16 +59,19 @@ export const Navbar = () => {
             <Link
               key={link.href}
               href={link.href}
-              className="hover:text-[#b91c1c] hover:underline decoration-red-600 underline-offset-4 transition-all"
+              className="text-[#d4af37] hover:text-[#b91c1c] hover:underline decoration-red-600 underline-offset-4 transition-all"
             >
-              {link.label}
+              {t(lang, `nav.${link.labelKey}`)}
             </Link>
           ))}
+
+          <LanguageSwitcher />
+
           <Link
             href="/auth/login"
             className="px-6 py-2 border border-[#b91c1c] text-[#b91c1c] hover:bg-[#b91c1c] hover:text-white transition-all duration-300"
           >
-            Connexion
+            {t(lang, "nav.login")}
           </Link>
         </div>
 
@@ -81,11 +94,11 @@ export const Navbar = () => {
               onClick={() => setIsMenuOpen(false)}
               className="hover:text-[#b91c1c] hover:underline decoration-red-600 transition-all"
             >
-              {link.label}
+              {t(lang, `nav.${link.labelKey}`)}
             </Link>
           ))}
           <Link href="/auth/login" onClick={() => setIsMenuOpen(false)}>
-            Connexion
+            {t(lang, "nav.login")}
           </Link>
         </div>
       )}

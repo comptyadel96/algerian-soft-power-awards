@@ -2,8 +2,11 @@
 
 import React, { useState } from "react";
 import { Instagram, Linkedin } from "lucide-react";
+import { useLocale } from "@/lib/useLocale";
+import { t } from "@/lib/i18n";
 
 export const ContactSection = () => {
+  const lang = useLocale();
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -24,12 +27,11 @@ export const ContactSection = () => {
           <div className="grid md:grid-cols-2 gap-20">
             <div>
               <h2 className="text-5xl font-serif mb-8 italic">
-                Travaillons <br />
+                {t(lang, "contact.title")} <br />
                 <span className="text-[#b91c1c]">Ensemble</span>
               </h2>
               <p className="text-gray-600 mb-12">
-                Devenez partenaire ou contactez-nous pour toute information
-                relative aux candidatures.
+                {t(lang, "contact.description")}
               </p>
               <div className="space-y-6">
                 <div className="flex items-center gap-4">
@@ -45,7 +47,7 @@ export const ContactSection = () => {
                     <Linkedin size={20} />
                   </div>
                   <span className="font-bold tracking-widest uppercase text-xs">
-                    Algerian Soft Power Awards
+                    Algerian Soft Power Day
                   </span>
                 </div>
               </div>
@@ -55,7 +57,7 @@ export const ContactSection = () => {
               <div className="grid grid-cols-2 gap-6">
                 <input
                   type="text"
-                  placeholder="PRÉNOM"
+                  placeholder={t(lang, "auth.firstName")}
                   value={formData.firstName}
                   onChange={(e) =>
                     setFormData({ ...formData, firstName: e.target.value })
@@ -64,7 +66,7 @@ export const ContactSection = () => {
                 />
                 <input
                   type="text"
-                  placeholder="NOM"
+                  placeholder={t(lang, "auth.lastName")}
                   value={formData.lastName}
                   onChange={(e) =>
                     setFormData({ ...formData, lastName: e.target.value })
@@ -74,7 +76,7 @@ export const ContactSection = () => {
               </div>
               <input
                 type="email"
-                placeholder="EMAIL"
+                placeholder={t(lang, "auth.email")}
                 value={formData.email}
                 onChange={(e) =>
                   setFormData({ ...formData, email: e.target.value })
@@ -82,7 +84,7 @@ export const ContactSection = () => {
                 className="w-full bg-transparent border-b-2 border-gray-200 py-4 focus:border-[#b91c1c] outline-none transition-all uppercase text-xs font-bold tracking-widest"
               />
               <textarea
-                placeholder="VOTRE MESSAGE"
+                placeholder={t(lang, "contact.form.message")}
                 rows={4}
                 value={formData.message}
                 onChange={(e) =>
@@ -94,7 +96,7 @@ export const ContactSection = () => {
                 type="submit"
                 className="w-full py-6 bg-black text-white font-bold uppercase tracking-[0.3em] hover:bg-[#b91c1c] transition-all duration-500"
               >
-                Envoyer
+                {t(lang, "contact.form.submit")}
               </button>
             </form>
           </div>

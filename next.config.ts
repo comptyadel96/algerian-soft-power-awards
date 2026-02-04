@@ -25,7 +25,20 @@ const nextConfig: NextConfig = {
 
   // Support des variables d'environnement
   env: {
-    NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000",
+    NEXT_PUBLIC_API_URL:
+      process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000",
+  },
+
+  // Rewrites pour i18n (route /ar/* vers /* avec query param)
+  async rewrites() {
+    return {
+      beforeFiles: [
+        {
+          source: "/ar/:path*",
+          destination: "/:path*",
+        },
+      ],
+    };
   },
 
   // Redirection et réécriture
