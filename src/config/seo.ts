@@ -103,8 +103,8 @@ export const generateMetadata = (): Metadata => ({
   alternates: siteMetadata.alternates,
   manifest: "/manifest.json",
   icons: {
-    icon: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
+    icon: "/logo.png?v=1",
+    apple: "/logo.png?v=1",
   },
   appleWebApp: {
     capable: true,

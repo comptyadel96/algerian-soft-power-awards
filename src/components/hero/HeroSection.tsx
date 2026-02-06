@@ -22,9 +22,11 @@ export const HeroSection = () => {
         <div className="absolute inset-0 z-10 bg-linear-to-t from-[#0a0a0a] via-transparent to-black/60"></div>
 
         <div className="relative z-20 text-center px-6 max-w-5xl mx-auto">
-          <div className="mb-6 inline-flex py-1 px-4 border border-[#b91c1c]/30 rounded-full bg-[#b91c1c]/10 text-[#b91c1c] text-xs font-bold tracking-[0.3em] uppercase animate-fade-in items-center gap-2">
-            <span className="w-2 h-2 bg-red-600 rounded-full inline-block"></span>
-            <span>{t(lang, "hero.subtitle")}</span>
+          <div className="mb-6 inline-flex py-1 px-4 border border-[#d4af37]/30 rounded-full bg-[#d4af37]/10 text-[#d4af37] text-xs font-bold tracking-[0.3em] uppercase animate-fade-in items-center gap-2">
+            <span className="w-2 h-2 bg-[#d4af37] rounded-full inline-block"></span>
+            <span className="font-semibold letter-spacing-wider">
+              {t(lang, "hero.subtitle")}
+            </span>
           </div>
 
           <h1 className="text-5xl md:text-8xl font-serif font-light mb-6 tracking-tight leading-tight animate-slide-up">
@@ -44,7 +46,7 @@ export const HeroSection = () => {
               onClick={handleVideoClick}
               className="px-10 py-5 border border-white/20 hover:border-[#b91c1c] transition-all duration-300 font-bold uppercase tracking-widest flex items-center justify-center gap-2 group"
             >
-              {lang === "ar" ? "مشاهدة المقطع الدعائي" : "Voir le teaser"}{" "}
+              Voir le teaser{" "}
               <PlayCircle
                 size={20}
                 className="group-hover:text-[#b91c1c] transition-colors"
@@ -59,10 +61,10 @@ export const HeroSection = () => {
         </div>
 
         {/* Scroll Indicator */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 text-[10px] uppercase tracking-[0.4em] text-white/40">
+        {/* <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 text-[10px] uppercase tracking-[0.4em] text-white/40">
           <span>{t(lang, "hero.scroll")}</span>
           <div className="w-px h-12 bg-linear-to-b from-red-600 to-transparent"></div>
-        </div>
+        </div> */}
       </section>
 
       {/* Video Popup */}

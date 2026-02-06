@@ -43,11 +43,11 @@ export const Navbar = () => {
           <Image
             src="/logo.png"
             alt="Algerian Soft Power Day Logo"
-            width={40}
-            height={40}
-            className="w-10 h-10 object-contain"
+            width={100}
+            height={100}
+            className="object-contain"
           />
-          <span className="text-xl font-bold tracking-[0.2em] uppercase hidden md:block">
+          <span className=" font-bold tracking-[0.2em] uppercase hidden md:block">
             <span className="text-[#d4af37]">Algerian Soft Power</span>{" "}
             <span className="italic text-[#b91c1c]">Day</span>
           </span>

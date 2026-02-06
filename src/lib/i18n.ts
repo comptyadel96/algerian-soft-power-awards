@@ -19,7 +19,7 @@ export const translations = {
     // Home Page
     hero: {
       title: "Soft Power Algérien",
-      subtitle: "Célébrons l'influence culturelle et l'excellence algérienne",
+      subtitle: "CÉLÉBRONS L'INFLUENCE CULTURELLE ET L'EXCELLENCE ALGÉRIENNE",
       cta: "Découvrir Plus",
       scroll: "Faire défiler vers le bas",
     },
@@ -44,9 +44,9 @@ export const translations = {
     },
     // Categories
     categories: {
-      title: "Catégories d'Awards",
+      title: "Catégories d'SP awards",
       description: "Explorez les 8 domaines d'excellence que nous récompensons",
-      excellence: "D'Excellence",
+      excellence: "",
       tagline: "Chaque trophée célèbre un pilier de notre rayonnement",
       items: [
         {
@@ -85,10 +85,44 @@ export const translations = {
     },
     // Programme
     programme: {
-      title: "Calendrier de l'édition",
+      title: "Programme de la journée",
       description:
         "Une série d'événements exclusifs pour forger de nouveaux ponts.",
       download: "Télécharger le dossier complet",
+      dayProgram: [
+        { time: "10h00", title: "Accueil des invités", desc: "Welcome" },
+        {
+          time: "11h00",
+          title: "Ouverture officielle de la journée",
+          desc: "Official opening",
+        },
+        {
+          time: "11h10",
+          title: "Première session",
+          desc: "Activer le potentiel inexploité du soft power algérien: Quelle vision? Pour quels objectifs?",
+        },
+        {
+          time: "11h55",
+          title: "Deuxième session",
+          desc: "Le cinéma algérien et les défis de l'industrie de l'image",
+        },
+        {
+          time: "12h35",
+          title: "Troisième session",
+          desc: "Du sport à la gastronomie, en passant par la musique et le tourisme: Comment la culture du quotidien façonne-t-elle le soft power algérien?",
+        },
+        { time: "13h15", title: "Clôture de la journée", desc: "Closing" },
+        {
+          time: "13h30",
+          title: "Annonce du lancement des SP Awards",
+          desc: "Award announcement",
+        },
+        {
+          time: "13h45",
+          title: "Déjeuner de travail et networking",
+          desc: "Networking Lunch",
+        },
+      ],
       phases: {
         nominations: "Appels à Nominations",
         voting: "Période de Vote",
@@ -183,13 +217,13 @@ export const translations = {
     // Home Page
     hero: {
       title: "القوة الناعمة الجزائرية",
-      subtitle: "احتفل بالتأثير الثقافي والتميز الجزائري",
+      subtitle: "احتفاءٌ بالحضور الثقافي الجزائري وروح التميّز والإبداع",
       cta: "اكتشف المزيد",
       scroll: "قم بالتمرير لأسفل",
     },
     // About Section
     about: {
-      title: "نبذة عنا",
+      title: "الإلهام",
       description:
         "تحتفل جوائز القوة الناعمة الجزائرية بالأفراد والمنظمات الذين يجسدون التميز والتأثير الإيجابي للجزائر على المسرح العالمي",
       heritage:
@@ -249,9 +283,43 @@ export const translations = {
     },
     // Programme
     programme: {
-      title: "جدول الطبعة",
+      title: "البرنامج",
       description: "سلسلة من الأحداث الحصرية لبناء جسور جديدة",
       download: "تنزيل الملف الكامل",
+      dayProgram: [
+        { time: "10:00", title: "استقبال الضيوف", desc: "Guest Reception" },
+        {
+          time: "11:00",
+          title: "الافتتاح الرسمي لليوم",
+          desc: "Official Opening",
+        },
+        {
+          time: "11:10",
+          title: "الجلسة الأولى",
+          desc: "تفعيل المُعطّل في القوة الناعمة الجزائرية: أي رؤية؟ لأي أهداف؟",
+        },
+        {
+          time: "11:55",
+          title: "الجلسة الثانية",
+          desc: "السينما الجزائرية وتحديات صناعة الصورة",
+        },
+        {
+          time: "12:35",
+          title: "الجلسة الثالثة",
+          desc: "من الرياضة إلى المائدة والموسيقى والسياحة: كيف تصنع الثقافة اليومية القوة الناعمة الجزائرية؟",
+        },
+        { time: "13:15", title: "اختتام اليوم", desc: "Closing" },
+        {
+          time: "13:30",
+          title: "الإعلان عن إطلاق جوائز SP Awards",
+          desc: "Award Announcement",
+        },
+        {
+          time: "13:45",
+          title: "غداء عمل وتواصل مهني",
+          desc: "Networking Lunch",
+        },
+      ],
       phases: {
         nominations: "طلب الترشيحات",
         voting: "فترة التصويت",

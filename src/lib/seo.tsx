@@ -150,8 +150,8 @@ export function SEOHead({
       />
 
       {/* Favicon */}
-      <link rel="icon" href="/favicon.ico" />
-      <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+      <link rel="icon" href="/logo.png?v=1" />
+      <link rel="apple-touch-icon" href="/logo.png?v=1" />
 
       {/* Verification */}
       <meta

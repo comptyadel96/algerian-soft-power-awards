@@ -22,12 +22,12 @@ export const metadata: Metadata = {
     {
       rel: "icon",
       type: "image/png",
-      url: "/logo.png",
+      url: "/logo.png?v=1",
       sizes: "192x192",
     },
     {
       rel: "apple-touch-icon",
-      url: "/logo.png",
+      url: "/logo.png?v=1",
       sizes: "192x192",
     },
   ],
