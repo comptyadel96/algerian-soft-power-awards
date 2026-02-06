@@ -47,9 +47,9 @@ export const Navbar = () => {
             height={100}
             className="object-contain"
           />
-          <span className=" font-bold tracking-[0.2em] uppercase hidden md:block">
-            <span className="text-[#d4af37]">Algerian Soft Power</span>{" "}
-            <span className="italic text-[#b91c1c]">Day</span>
+          <span className=" font-bold tracking-[0.2em] uppercase hidden md:block text-sm">
+            <span className="text-[#d4af37]">ASP</span>
+            <span className="italic text-[#b91c1c]">D</span>
           </span>
         </Link>
 
@@ -67,12 +67,12 @@ export const Navbar = () => {
 
           <LanguageSwitcher />
 
-          <Link
+          {/* <Link
             href="/auth/login"
             className="px-6 py-2 border border-[#b91c1c] text-[#b91c1c] hover:bg-[#b91c1c] hover:text-white transition-all duration-300"
           >
             {t(lang, "nav.login")}
-          </Link>
+          </Link> */}
         </div>
 
         {/* Mobile Menu Button */}
