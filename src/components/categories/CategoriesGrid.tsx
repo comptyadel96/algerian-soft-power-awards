@@ -22,7 +22,7 @@ const CATEGORY_IMAGES = [
     src: "https://images.unsplash.com/photo-1490730141103-6cac27aaab94?w=400&h=300&fit=crop",
     alt: "Médias & Contenus",
   },
-  { src: "/création.jpeg", alt: "Arts Créatifs" },
+  { src: "/Création.jpeg", alt: "Arts Créatifs" },
   {
     src: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=400&h=300&fit=crop",
     alt: "Sport",

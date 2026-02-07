@@ -99,7 +99,7 @@ const GUESTS = [
   {
     id: 10,
     name: "Beihdja Rahal",
-    image: "/invités/beihdja-rahal.jpeg",
+    image: "/invités/Beihdja-rahal.jpeg",
     bioFr:
       "Artiste en musique classique. Elle a remporté en 2006 le prix Mahfouz Boussebsi en reconnaissance de ses recherches et efforts de préservation du patrimoine musical andalou. En 2008, le magazine Jeune Afrique l'a classée parmi les '50 personnalités qui font l'Algérie'.",
     bioAr:
