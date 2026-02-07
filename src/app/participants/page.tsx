@@ -19,7 +19,7 @@ const GUESTS = [
   {
     id: 2,
     name: "Zoheir Bouamama",
-    image: "/invités/Zoheir-Bouamama-800x502.jpg.jpeg",
+    image: "/invités/Zoheir-Bouamama.jpeg",
     bioFr:
       "Professeur universitaire et chercheur en sciences politiques et relations internationales, titulaire d'un doctorat en spécialité. Analyste politique ayant contribué à plusieurs publications scientifiques. Il a occupé le poste de conseiller auprès du président de la République et occupe actuellement le poste de ministre de la Communication.",
     bioAr:
@@ -69,7 +69,7 @@ const GUESTS = [
   {
     id: 7,
     name: "Fayçal Sahbi",
-    image: "/invités/Fayçal Sahbi.jpg",
+    image: "/invités/fayçal-Sahbi.jpg",
     bioFr:
       "Expert en politiques culturelles et conseiller en stratégie culturelle, Fayçal Sahbi est professeur et chercheur universitaire en sciences de la communication et cinéma. Il a occupé plusieurs postes dans des festivals artistiques, notamment en tant que directeur artistique de RAI NATION et du Festival International du Cinéma de Timimoun.",
     bioAr:
@@ -99,7 +99,7 @@ const GUESTS = [
   {
     id: 10,
     name: "Beihdja Rahal",
-    image: "/invités/573339384_1152428580340203_311716325976914959_n.jpg.jpeg",
+    image: "/invités/beihdja-rahal.jpeg",
     bioFr:
       "Artiste en musique classique. Elle a remporté en 2006 le prix Mahfouz Boussebsi en reconnaissance de ses recherches et efforts de préservation du patrimoine musical andalou. En 2008, le magazine Jeune Afrique l'a classée parmi les '50 personnalités qui font l'Algérie'.",
     bioAr:
@@ -119,7 +119,7 @@ const GUESTS = [
   {
     id: 12,
     name: "Sofiane Lesage Berghout",
-    image: "/invités/gFJLmG4C_400x400.jpg.jpeg",
+    image: "/invités/sofiane-lesage.jpeg",
     bioFr:
       "Fondateur de Riwaya Travel qui vise à promouvoir la position de l'Algérie comme destination touristique. Il dirige actuellement cette institution et gère une équipe de travail en Algérie et en France. Sofiane est titulaire d'une maîtrise en gestion de l'école ESCP Business School en 2022 et est intervenant dans plusieurs séminaires touristiques.",
     bioAr:
