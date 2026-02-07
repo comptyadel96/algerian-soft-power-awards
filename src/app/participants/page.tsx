@@ -8,7 +8,7 @@ import { X } from "lucide-react";
 const GUESTS = [
   {
     id: 1,
-    name: "Malika Bensaid",
+    name: "Malika Bendouda",
     image: "/invités/bendouda-1.jpeg",
     bioFr:
       "Professeure et chercheuse aux universités de Tiaret et d'Oran, elle occupe actuellement le poste de ministre de la Culture. Titulaire d'un doctorat en philosophie et chercheuse en philosophie politique, elle a contribué à plusieurs recherches scientifiques. Elle est membre du Réseau international des femmes philosophes de l'UNESCO et du Bureau international de la Fédération des associations de philosophie.",
