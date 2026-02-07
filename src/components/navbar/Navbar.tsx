@@ -48,8 +48,8 @@ export const Navbar = () => {
             className="object-contain"
           />
           <span className=" font-bold tracking-[0.2em] uppercase hidden md:block text-sm">
-            <span className="text-[#d4af37]">ASP</span>
-            <span className="italic text-[#b91c1c]">D</span>
+            <span className="text-[#d4af37] inline-flex flex-nowrap">Algerian Soft Power</span>{" "}
+            <span className="italic text-[#b91c1c]">Day</span>
           </span>
         </Link>
 

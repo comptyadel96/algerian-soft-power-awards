@@ -51,9 +51,9 @@ export const CategoriesGrid = () => {
       <div className="container mx-auto px-6 text-center mb-20">
         <h2 className="text-4xl md:text-6xl font-serif mb-6 italic">
           {t(lang, "categories.title")}{" "}
-          <span className="text-[#b91c1c]">
+          {/* <span className="text-[#b91c1c]">
             {t(lang, "categories.excellence")}
-          </span>
+          </span> */}
         </h2>
         <p className="text-gray-400 max-w-2xl mx-auto uppercase tracking-widest text-sm">
           {t(lang, "categories.tagline")}
