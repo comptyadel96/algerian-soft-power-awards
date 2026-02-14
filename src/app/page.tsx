@@ -2,7 +2,7 @@ import { Navbar } from "@/components/navbar/Navbar";
 import { HeroSection } from "@/components/hero/HeroSection";
 import { AcknowledgmentsSection } from "@/components/acknowledgments/AcknowledgmentsSection";
 import { AboutSection } from "@/components/about/AboutSection";
-import { CategoriesGrid } from "@/components/categories/CategoriesGrid";
+import { CategoriesGrid } from "../../public/Gallerie/CategoriesGrid";
 import { ProgrammeSection } from "@/components/programme/ProgrammeSection";
 import { GallerySection } from "@/components/gallery/GallerySection";
 import { ContactSection } from "@/components/contact/ContactSection";

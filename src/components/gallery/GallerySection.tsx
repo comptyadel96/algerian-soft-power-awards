@@ -7,6 +7,20 @@ import { X } from "lucide-react";
 import Image from "next/image";
 
 const GALLERY_IMAGES = [
+  "/Gallerie/1.jpeg",
+  "/Gallerie/2.jpeg",
+  "/Gallerie/3.jpeg",
+  "/Gallerie/4.jpeg",
+  "/Gallerie/5.jpeg",
+  "/Gallerie/6.jpeg",
+  "/Gallerie/7.jpeg",
+  "/Gallerie/8.jpeg",
+  "/Gallerie/9.jpeg",
+  "/Gallerie/10.jpeg",
+  "/Gallerie/11.jpeg",
+  "/Gallerie/12.jpeg",
+  "/Gallerie/13.jpeg",
+  "/Gallerie/14.jpeg",
   "/Gallerie/Algerian desert ________________.jpeg",
   "/Gallerie/Constantine Algérie algeria photos enregistré par adel Hafsi.jpeg",
   "/Gallerie/Casbah d'Alger_.jpeg",
